@@ -46,7 +46,7 @@ The repository is documentation-first. It does not yet contain a runnable implem
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md): community standards
 - [SECURITY.md](SECURITY.md): security reporting and scope
 - [CHANGELOG.md](CHANGELOG.md): project history
-- [adr/](adr/): durable architecture decisions and trade-offs
+- [docs/adr/](docs/adr/): durable architecture decisions and trade-offs
 - [docs/diagrams/](docs/diagrams/): Mermaid source diagrams
 - [docs/evaluation/](docs/evaluation/): evaluation plan template
 - [docs/model-cards/](docs/model-cards/): model documentation template

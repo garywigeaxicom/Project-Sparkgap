@@ -5,7 +5,7 @@ Thank you for helping improve this public AI design reference. Contributions sho
 ## Before You Start
 
 - Read [README.md](README.md) and [DESIGN.md](DESIGN.md).
-- Check existing issues, pull requests, and architecture decision records in `adr/`.
+- Check existing issues, pull requests, and architecture decision records in `docs/adr/`.
 - Keep examples clearly separated from normative requirements.
 - Do not include credentials, private data, undisclosed vulnerabilities, or proprietary material.
 
