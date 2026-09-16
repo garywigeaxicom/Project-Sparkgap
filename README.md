@@ -21,6 +21,8 @@ The document includes:
 - safety, fairness, red-teaming, auditability, and human review
 - deployment, observability, disaster recovery, and risk management
 - contribution, review, versioning, and change-management guidance
+- architecture diagrams, decision records, evaluation templates, and deployment profiles
+- portability, cost, sustainability, accessibility, and inclusion guidance
 
 ## Who This Is For
 
@@ -36,7 +38,23 @@ You do not need to adopt the entire architecture. Treat it as a set of documente
 
 ## Current Status
 
-The repository currently contains the public design reference and licensing materials. It does not yet contain a runnable implementation, deployment manifests, or application code. Technology names and configuration examples in the design document describe an architectural direction; they are not a claim that every component is ready to deploy as-is.
+The repository is documentation-first. It does not yet contain a runnable implementation, deployment manifests, or application code. Technology names and configuration examples in the design document describe an architectural direction; they are not a claim that every component is ready to deploy as-is.
+
+## Repository Guide
+
+- [CONTRIBUTING.md](CONTRIBUTING.md): contribution and review expectations
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md): community standards
+- [SECURITY.md](SECURITY.md): security reporting and scope
+- [CHANGELOG.md](CHANGELOG.md): project history
+- [adr/](adr/): durable architecture decisions and trade-offs
+- [docs/diagrams/](docs/diagrams/): Mermaid source diagrams
+- [docs/evaluation/](docs/evaluation/): evaluation plan template
+- [docs/model-cards/](docs/model-cards/): model documentation template
+- [docs/dataset-cards/](docs/dataset-cards/): dataset documentation template
+- [docs/deployment-profiles/](docs/deployment-profiles/): adaptation profiles by scale and risk
+- [docs/portability.md](docs/portability.md): capability contracts and replaceable implementations
+- [docs/cost-and-sustainability.md](docs/cost-and-sustainability.md): cost and sustainability worksheet
+- [docs/accessibility-and-inclusion.md](docs/accessibility-and-inclusion.md): inclusion requirements
 
 ## Contributing
 

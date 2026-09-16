@@ -191,6 +191,36 @@ This document is intentionally not:
 
 Instead, it is a reference architecture and public design narrative intended to help teams understand the core structure, responsibilities, and safeguards associated with modern production AI systems.
 
+## 1.8 Use Cases and Boundaries
+
+The reference architecture is intended to support knowledge search and synthesis, document analysis, grounded question answering, workflow assistance, research support, and decision support where a responsible human remains accountable. These examples describe design targets rather than proof that every implementation is suitable for every domain.
+
+The architecture is not intended to make unreviewable decisions about a person's employment, housing, education, healthcare, legal status, access to essential services, or physical safety. It must not be presented as an autonomous authority, a substitute for professional judgment, or evidence that an answer is correct merely because it is fluent. High-impact deployments require domain-specific assessment, recourse, human oversight, and applicable legal review.
+
+## 1.9 Open Questions and Roadmap
+
+The following questions remain intentionally open for public review:
+
+- Which smaller, multilingual, and resource-efficient models provide acceptable quality and safety for lower-cost deployments?
+- What common interfaces best preserve portability across hosted models, self-hosted models, and non-LLM systems?
+- How should data residency, deletion requests, licensing, and provenance be represented consistently across retrieval and training workflows?
+- Which evaluation methods best measure groundedness, uncertainty, accessibility, and harm across different communities and languages?
+- What governance model should guide community participation, maintainers, and high-impact design changes as the project grows?
+
+Near-term work should prioritize reusable evaluation artifacts, example datasets with clear provenance, architecture diagrams, deployment profiles, and small reference implementations that demonstrate the documented contracts. A complete production implementation is deliberately deferred until the public design and its safety assumptions have received broader review.
+
+## 1.10 Portability, Cost, and Inclusion
+
+Named technologies in this document are examples of implementation choices, not requirements. Implementations should preserve the capability contracts described in [docs/portability.md](docs/portability.md) and document provider-specific behavior, data residency, lock-in, and feature differences when components are replaced.
+
+Every adaptation should estimate infrastructure, storage, network, training, inference, operations, and human-review costs. Cost should be measured per successful task as well as per token, and sustainability considerations should include model size, accelerator utilization, retraining frequency, retention, and lower-compute alternatives. The worksheet in [docs/cost-and-sustainability.md](docs/cost-and-sustainability.md) provides a consistent starting point.
+
+Accessibility and inclusion are design requirements. Evaluations should account for relevant languages, user groups, assistive technologies, low-bandwidth environments, and human alternatives. See [docs/accessibility-and-inclusion.md](docs/accessibility-and-inclusion.md) for the baseline requirements.
+
+## 1.11 Reference Implementation Boundary
+
+Project Sparkgap currently provides a public design reference, templates, and decision records. It does not claim to provide a production-ready application or a single mandatory stack. Future code should demonstrate interfaces and safety practices without turning illustrative examples into unsupported deployment guarantees.
+
 ---
 
 
