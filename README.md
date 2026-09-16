@@ -23,6 +23,8 @@ The document includes:
 - contribution, review, versioning, and change-management guidance
 - architecture diagrams, decision records, evaluation templates, and deployment profiles
 - portability, cost, sustainability, accessibility, and inclusion guidance
+- executable API and data contracts for a future reference implementation
+- a bounded v0.1 implementation plan and production-readiness gate
 
 ## Who This Is For
 
@@ -55,6 +57,11 @@ The repository is documentation-first. It does not yet contain a runnable implem
 - [docs/portability.md](docs/portability.md): capability contracts and replaceable implementations
 - [docs/cost-and-sustainability.md](docs/cost-and-sustainability.md): cost and sustainability worksheet
 - [docs/accessibility-and-inclusion.md](docs/accessibility-and-inclusion.md): inclusion requirements
+- [docs/api/](docs/api/): versioned OpenAPI contract and API guidance
+- [docs/schemas/](docs/schemas/): versioned JSON data contracts
+- [docs/implementation/](docs/implementation/): v0.1 scope and local-development guidance
+- [docs/evaluation/fixtures/](docs/evaluation/fixtures/): public regression cases
+- [docs/production-readiness-checklist.md](docs/production-readiness-checklist.md): deployment release gate
 
 ## Contributing
 

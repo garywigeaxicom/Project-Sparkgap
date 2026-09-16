@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://projectsparkgap.example/schemas/training-record.schema.json",
+  "title": "Training Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_id", "source", "created_at", "language", "instruction", "input_context", "output", "split", "is_filtered", "dedup_hash"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "record_id": {"type": "string", "minLength": 1},
+    "source": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "language": {"type": "string", "minLength": 2, "maxLength": 16},
+    "instruction": {"type": "string", "minLength": 1},
+    "input_context": {"type": "string"},
+    "output": {"type": "string", "minLength": 1},
+    "quality_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "labeler_id": {"type": "string"},
+    "split": {"type": "string", "enum": ["train", "validation", "test"]},
+    "tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "is_filtered": {"type": "boolean"},
+    "dedup_hash": {"type": "string", "pattern": "^sha256:[a-f0-9]{8,}$"}
+  }
+}

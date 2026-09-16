@@ -9,6 +9,7 @@ The project uses documentation-oriented versioning. A minor version adds or clar
 - Added public project governance documents and contribution guidance.
 - Added architecture decision records, diagram sources, evaluation templates, model and dataset card templates, and deployment profiles.
 - Added explicit use-case boundaries, open questions, portability guidance, accessibility requirements, and cost considerations to the master design.
+- Added the v0.1 OpenAPI contract, versioned JSON data schemas, public evaluation fixtures, local-development guidance, and a production-readiness checklist.
 
 ## 1.0 - 2026-09-16
 

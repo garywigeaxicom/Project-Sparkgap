@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://projectsparkgap.example/schemas/embedding-record.schema.json",
+  "title": "Vector Embedding Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "vector", "payload"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "vector": {"type": "array", "minItems": 1, "items": {"type": "number"}},
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_doc_id", "chunk_index", "chunk_text", "document_title", "last_modified", "ingested_at", "language", "sensitivity_class"],
+      "properties": {
+        "source_doc_id": {"type": "string"},
+        "source_url": {"type": "string", "format": "uri-reference"},
+        "chunk_index": {"type": "integer", "minimum": 0},
+        "chunk_text": {"type": "string", "minLength": 1},
+        "chunk_token_count": {"type": "integer", "minimum": 1},
+        "document_title": {"type": "string"},
+        "document_type": {"type": "string"},
+        "last_modified": {"type": "string", "format": "date-time"},
+        "ingested_at": {"type": "string", "format": "date-time"},
+        "language": {"type": "string"},
+        "sensitivity_class": {"type": "string", "enum": ["Public", "Internal", "Confidential", "Restricted"]}
+      }
+    }
+  }
+}

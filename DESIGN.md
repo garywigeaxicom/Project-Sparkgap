@@ -298,7 +298,7 @@ Accessibility and inclusion are design requirements. Evaluations should account 
 
 ## 1.11 Reference Implementation Boundary
 
-Project Sparkgap currently provides a public design reference, templates, and decision records. It does not claim to provide a production-ready application or a single mandatory stack. Future code should demonstrate interfaces and safety practices without turning illustrative examples into unsupported deployment guarantees.
+Project Sparkgap currently provides a public design reference, templates, decision records, executable API and data contracts, evaluation fixtures, and an implementation plan for a bounded v0.1 vertical slice. It does not claim to provide a production-ready application or a single mandatory stack. Future code should demonstrate interfaces and safety practices without turning illustrative examples into unsupported deployment guarantees. The v0.1 boundary is defined in [docs/implementation/v0.1-scope.md](docs/implementation/v0.1-scope.md); production release requires the [production-readiness checklist](docs/production-readiness-checklist.md).
 
 ---
 

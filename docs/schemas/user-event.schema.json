@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://projectsparkgap.example/schemas/user-event.schema.json",
+  "title": "User Interaction Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "event_type", "timestamp", "session_id", "tenant_id", "query_token_count", "model_version", "was_streamed", "client_platform"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "event_type": {"type": "string", "enum": ["query_submitted", "response_completed", "feedback_submitted"]},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "session_id": {"type": "string", "minLength": 1},
+    "user_id_hash": {"type": "string"},
+    "tenant_id": {"type": "string", "minLength": 1},
+    "query_text": {"type": ["string", "null"], "description": "Must be scrubbed or null before persistence."},
+    "query_token_count": {"type": "integer", "minimum": 0},
+    "response_latency_ms": {"type": ["integer", "null"], "minimum": 0},
+    "model_version": {"type": "string", "minLength": 1},
+    "was_streamed": {"type": "boolean"},
+    "feedback_thumbs": {"type": ["string", "null"], "enum": ["up", "down", null]},
+    "client_platform": {"type": "string", "enum": ["web", "mobile", "cli", "api"]},
+    "geographic_region": {"type": "string"}
+  }
+}
