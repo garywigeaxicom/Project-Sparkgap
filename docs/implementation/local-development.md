@@ -1,6 +1,6 @@
 # Local Development Guide
 
-Project Sparkgap does not yet include a runnable implementation. This guide defines the expected local workflow for the v0.1 reference implementation so future code can be added consistently.
+This guide describes the local workflow for the v0.1 reference implementation. It is intentionally not a production deployment guide.
 
 ## Prerequisites
 
@@ -23,11 +23,11 @@ A hosted model may be used for local development, but tests must support a deter
 
 ## Expected Workflow
 
-1. Copy the eventual `.env.example` to a local, untracked environment file.
-2. Start local dependencies with the implementation's documented command.
-3. Ingest only the public sample corpus.
-4. Run schema validation and unit tests.
-5. Start the API and call `/v1/health`.
+1. Create a virtual environment and install the project with `python -m pip install -e ".[test]"`.
+2. Copy `.env.example` to a local, untracked environment file.
+3. Ingest the public sample corpus with `sparkgap-ingest ingest`.
+4. Run schema validation and unit tests with `python -m pytest -q`.
+5. Start the API with `uvicorn sparkgap.app:app --reload` and call `/v1/health`.
 6. Run the v0.1 evaluation fixtures.
 7. Record model, corpus, configuration, and test-report identifiers.
 

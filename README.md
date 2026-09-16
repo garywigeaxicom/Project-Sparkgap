@@ -40,7 +40,17 @@ You do not need to adopt the entire architecture. Treat it as a set of documente
 
 ## Current Status
 
-The repository is documentation-first. It does not yet contain a runnable implementation, deployment manifests, or application code. Technology names and configuration examples in the design document describe an architectural direction; they are not a claim that every component is ready to deploy as-is.
+The repository now includes a bounded v0.1 reference implementation. It is intentionally local and dependency-light: it supports Markdown/text ingestion, deterministic lexical retrieval, a configurable OpenAI-compatible model adapter, a safe fallback model, safety checks, structured events, and the documented API. It is not production-ready and does not include production secrets, private data, multi-region infrastructure, or GPU deployment.
+
+## Run the Reference Slice
+
+```powershell
+python -m pip install -e ".[test]"
+sparkgap-ingest ingest
+uvicorn sparkgap.app:app --reload
+```
+
+Then open `http://127.0.0.1:8000/docs` or call `GET /v1/health`. The default fallback model uses retrieved excerpts and requires no model credentials. Configure `SPARKGAP_MODEL_BASE_URL` and `SPARKGAP_MODEL_API_KEY` to use an OpenAI-compatible model endpoint.
 
 ## Repository Guide
 
@@ -62,6 +72,10 @@ The repository is documentation-first. It does not yet contain a runnable implem
 - [docs/implementation/](docs/implementation/): v0.1 scope and local-development guidance
 - [docs/evaluation/fixtures/](docs/evaluation/fixtures/): public regression cases
 - [docs/production-readiness-checklist.md](docs/production-readiness-checklist.md): deployment release gate
+- `src/sparkgap/`: v0.1 Python package
+- `tests/`: implementation and API tests
+- `examples/corpus/`: public sample documents for local evaluation
+- [pyproject.toml](pyproject.toml): dependencies, test configuration, and CLI entry point
 
 ## Contributing
 
